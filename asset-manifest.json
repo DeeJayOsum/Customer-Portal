@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Customer-Portal/static/css/main.0121d71e.css",
+    "main.js": "/Customer-Portal/static/js/main.e2b68d4c.js",
+    "static/js/453.f3dc08e8.chunk.js": "/Customer-Portal/static/js/453.f3dc08e8.chunk.js",
+    "static/media/nysoh-logo.png": "/Customer-Portal/static/media/nysoh-logo.6d43838a9501330e6a44.png",
+    "static/media/footer.png": "/Customer-Portal/static/media/footer.567bd1938e91489f709f.png",
+    "static/media/person-icon.svg": "/Customer-Portal/static/media/person-icon.437be104925b6a8dab934e2996556418.svg",
+    "index.html": "/Customer-Portal/index.html",
+    "main.0121d71e.css.map": "/Customer-Portal/static/css/main.0121d71e.css.map",
+    "main.e2b68d4c.js.map": "/Customer-Portal/static/js/main.e2b68d4c.js.map",
+    "453.f3dc08e8.chunk.js.map": "/Customer-Portal/static/js/453.f3dc08e8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0121d71e.css",
+    "static/js/main.e2b68d4c.js"
+  ]
+}
