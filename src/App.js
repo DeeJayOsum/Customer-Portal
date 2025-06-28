@@ -23,6 +23,7 @@ function App() {
       <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}></Header>
       <div className='app-margin'>
         <Routes>
+          <Route path="/Customer-Portal" element={<WelcomeScreen />} />
           <Route path="/" element={<WelcomeScreen />} />
           <Route path="/verify" element={<Verify />} />
           <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />

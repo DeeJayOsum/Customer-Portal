@@ -1,4 +1,4 @@
-.left-nav{
+.left-nav {
     border: 1px solid black;
     border-radius: 4px;
     width: 10%;
@@ -6,9 +6,19 @@
     margin-right: 10px;
 }
 
-.left-nav-screens{
+.left-nav-screens {
     display: flex;
     border: 1px solid black;
     border-radius: 4px;
     width: 90%;
+}
+
+@media (max-width: 1068px) {
+    .left-nav-screens {
+        display: block;
+    }
+
+    .left-nav {
+        width: auto;
+    }
 }
