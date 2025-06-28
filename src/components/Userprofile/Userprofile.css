@@ -1,0 +1,14 @@
+.left-nav{
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 10%;
+    padding: 30px;
+    margin-right: 10px;
+}
+
+.left-nav-screens{
+    display: flex;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 90%;
+}
