@@ -1,18 +1,19 @@
 import './App.css';
 import Header from './components/Header/Header';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Login from './components/Login/Login';
+import Login from './Pages/Auth/Login';
+import SignupForm from './Pages/Auth/SignupForm';
 import React, { useState } from 'react';
 import Verify from './components/Verify/Verify';
-import Dashboard from './components/Userprofile/Userprofile';
-import Household from './components/Sections/Household';
-import Section from './components/Sections/Section';
-import Start from './components/Sections/Start';
-import People from './components/Sections/People';
-import Congrats from './components/Sections/Congrats';
-import Benefits from './components/BenefitDashboard/BenefitDashboard';
-import ContactInfo from './components/ContactInfo/ContactInfo';
-import Documents from './components/Documents/Documents';
+import Dashboard from './Pages/Dashboard/Userprofile/Userprofile';
+import Household from './Pages/Sections/Household';
+import Section from './Pages/Sections/Section';
+import Start from './Pages/Sections/Start';
+import People from './Pages/Sections/People';
+import Congrats from './Pages/Sections/Congrats';
+import Benefits from './Pages/Dashboard/BenefitDashboard';
+import ContactInfo from './Pages/Dashboard/ContactInfo';
+import Documents from './Pages/Dashboard/Documents'
 import footer from './assets/footer.png';
 import WelcomeScreen from './Welcome'
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<WelcomeScreen />} />
           <Route path="/verify" element={<Verify />} />
           <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+          <Route path="/signup" element={<SignupForm  />} />
           <Route path="/dashboard" element={<Dashboard />} >
             <Route index element={<Navigate to="benefits" replace />} />
             <Route path="benefits" element={<Benefits />} />

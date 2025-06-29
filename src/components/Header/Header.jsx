@@ -4,10 +4,13 @@ import './Header.css';
 import logo from '../../assets/nysoh-logo.png';
 import emitter from '../EventEmitter';
 import userIcon from '../../assets/person-icon.svg';
+import { useAuth } from "../../authContext";
+import { logout } from "../../authService";
 
 const Header = ({ isLoggedIn, setIsLoggedIn }) => {
 
   const navigate = useNavigate();
+  const { user } = useAuth();
 
   const [userId, setUserId] = useState('User');
 
@@ -15,7 +18,8 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleSignOut = () => {
+  const handleSignOut = async () => {
+    await logout();
     setIsLoggedIn(false);
     // Optionally redirect to home or signin page
     setUserId(null);
@@ -49,7 +53,7 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
               display: 'flex',
             }}>
               <img src={userIcon} alt="Logo" style={{ width: '30px', height: 'auto' }} />
-              <span>{userId}</span>
+              <span>{user?.email}</span>
               <div ref={menuRef} style={{ position: 'relative', display: 'inline-block' }}>
                 {/* Down Arrow Icon */}
                 <div onClick={() => setIsOpen(prev => !prev)} style={{ fontSize: '18px', cursor: 'pointer' }}>
@@ -76,9 +80,15 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
                 )}
               </div>
             </div> :
-            <Link to="/login">
-              <button className='blue-button'>Login</button>
-            </Link>}
+            <>
+              <Link to="/login">
+                <button className='blue-button'>Login</button>
+              </Link>
+              <Link to="/signup">
+                <button className='blue-button'>Signup</button>
+              </Link>
+            </>
+          }
 
         </div>
       </div>
@@ -86,7 +96,7 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
         isLoggedIn ?
           <div className='blue-header'>
             <Link to="/application">
-              <div style={{color : 'white'}}>
+              <div style={{ color: 'white' }}>
                 Apply
               </div>
             </Link>

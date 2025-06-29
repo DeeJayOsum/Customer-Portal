@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Popup from '../Popup/Popup.jsx';
+import Popup from '../../components/Spinner/Spinner';
 
 const Documents = () => {
   const [files, setFiles] = useState([]);

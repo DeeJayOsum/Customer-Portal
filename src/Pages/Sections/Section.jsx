@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
-import Spinner from '../Spinner/Spinner';
+import Spinner from '../../components/Popup/Popup';
 
 const Section = () => {
 

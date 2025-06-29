@@ -48,21 +48,6 @@ const Congrats = () => {
         }}>
           Thank you for applying!
         </p>
-        <a
-          href="/dashboard"
-          style={{
-            display: 'inline-block',
-            padding: '12px 24px',
-            backgroundColor: '#0072CE',
-            color: '#ffffff',
-            textDecoration: 'none',
-            borderRadius: '4px',
-            fontWeight: 'bold',
-            fontSize: '16px'
-          }}
-        >
-          Return to Home
-        </a>
       </div>
     </div>
   );

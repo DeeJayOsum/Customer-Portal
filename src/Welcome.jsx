@@ -1,7 +1,9 @@
 import React from 'react';
+import SpotifyPlayer  from './components/SpotifyPlayer'
 
 const WelcomeScreen = ({ onStart }) => {
   return (
+    <>
     <div style={containerStyle}>
       <div style={boxStyle}>
         <h1 style={titleStyle}>Welcome to NY State of Health</h1>
@@ -19,6 +21,8 @@ const WelcomeScreen = ({ onStart }) => {
         </button>
       </div>
     </div>
+    <SpotifyPlayer/>
+    </>
   );
 };
 
